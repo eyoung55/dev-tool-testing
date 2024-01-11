@@ -47,7 +47,7 @@ black .
 	- hook id: black
 	- files were modified by this hook
 
-	reformatted eky.py
+	reformatted modified_file.py
 
 	All done! ✨ 🍰 ✨
 	1 file reformatted.
