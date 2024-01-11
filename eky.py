@@ -13,3 +13,12 @@ more_wrong_lines = (
 )
 
 a = "a" + "b"
+
+
+aa = "hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh" + str(
+    8743764734834834733437438478
+)
+
+
+another_bad_thing = 5 + np.array([100, 100, 100, 100, 100, 100, 100, 100, 100])
+
