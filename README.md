@@ -38,3 +38,27 @@ black .
 	```bash
 	pre-commit install
 	``` 
+
+4. To test it, try to commit a new file or modify an existing file with formatting problems (for example, a line of code longer than 88 characters). Add this file to the staging area, `git add modified_file.py`, and then commit it, `git commit -m "add a too long line"`. If configured correctly, you should see something like the following:
+
+	```bash
+	(pvade) [conda-arm] eyoung$ git commit -m "add a too long line"
+	black....................................................................Failed
+	- hook id: black
+	- files were modified by this hook
+
+	reformatted eky.py
+
+	All done! ✨ 🍰 ✨
+	1 file reformatted.
+	```
+
+	where `black` has alerted you to the fact that formatting changes were necessary. To proceed with the commit, *you must re-add the formatted file to the staging area*, `git add modified_file.py`, then again commit it `git commit -m "add a too long line"`, which should result in something like:
+
+	```bash
+	(pvade) [conda-arm] eyoung$ git commit -m "add a too long line"
+	black....................................................................Passed
+	[main 013b033] add a too long line
+	1 file changed, 4 insertions(+)
+	```
+
